@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>State List</title>
+</head>
+<body>
+    <h1>State List</h1>
+    <a href="{% url 'state_create' %}">Create a new state</a>
+    <ul>
+        {% for state in states %}
+            <li>
+                <a href="{% url 'state_detail' state.pk %}">{{ state.name }}</a> 
+                | <a href="{% url 'state_update' state.pk %}">update</a> 
+                | <a href="{% url 'state_delete' state.pk %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

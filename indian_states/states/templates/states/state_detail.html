@@ -1,0 +1,15 @@
+<!-- states/templates/states/state_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>State Detail</title>
+</head>
+<body>
+    <h1>{{ state.name }}</h1>
+    <p>Population: {{ state.population }}</p>
+    <p>Language: {{ state.language }}</p>
+    <p>Capital: {{ state.capital }}</p>
+    <a href="{% url 'state_list' %}">Back to State List</a>
+</body>
+</html>
